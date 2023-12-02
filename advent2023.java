@@ -7,6 +7,7 @@ import java.util.*;
 
 class advent2023 {
     public static void main(String[] args) throws java.io.IOException {
+        long start = System.nanoTime();
         for (int i = 1; i <= 2; i++) {
             Problem p;
             switch (i) {
@@ -21,6 +22,7 @@ class advent2023 {
             }
             run_problem(i, p, false);
         }
+        System.out.println("Total elapsed:    " + format_time(start));
     }
 
     // Load data file, parse input, call both solvers, and print results
